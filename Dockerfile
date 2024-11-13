@@ -5,7 +5,8 @@ FROM rust:latest AS builder
 WORKDIR /app
 
 # Copy the Cargo manifest and source code to the container
-COPY Cargo.toml Cargo.lock ./
+#COPY Cargo.toml Cargo.lock ./
+COPY Cargo.toml ./
 COPY src ./src
 
 # Build the application in release mode
